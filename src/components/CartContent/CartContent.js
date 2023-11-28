@@ -8,14 +8,14 @@ import Navbar from "../Navbar/Navbar";
 import "./CartContent.css";
 
 const CartContent = () => {
-  const { cart } = useContext(dataContext);
+  const { cart, products } = useContext(dataContext);
 
   return (
     <>
       <Navbar />
       {cart.length > 0 ? (
         <>
-          <CartElements />
+          <CartElements products={products} />
           <CartTotal />
         </>
       ) : (

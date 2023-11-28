@@ -1,32 +1,35 @@
+/* CSS - LogIn.css */
+
 .login-form-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f5f5f5; /* Crema */
+  background-color: #9EB384; /* Cambiado a color verde oscuro */
 }
 
-form {
+.login-form {
   max-width: 400px;
   width: 100%;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #006400; /* Verde oscuro */
+  background-color: #435334; /* Cambiado a color verde oscuro */
   color: #fff; /* Texto blanco */
 }
 
-.form-group {
+.grupo-formulario {
   margin-bottom: 20px;
 }
 
-label {
+.etiqueta {
   display: block;
   margin-bottom: 8px;
   color: #fff; /* Texto blanco */
 }
 
-input {
+.entrada {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -35,16 +38,32 @@ input {
   outline: none;
 }
 
-button {
+.boton {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50; /* Verde */
+  background-color: #435334; /* Cambiado a color verde oscuro */
   color: #fff; /* Texto blanco */
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+.boton:hover {
+  background-color: #2b3e26; /* Cambiado a un tono más oscuro */
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff; /* Texto blanco */
+}
+
+a {
+  color: #435334; /* Cambiado a color verde oscuro */
+}
+
+/* Nueva regla para el título */
+h2.titulo {
+  color: #fff; /* Texto blanco */
+  margin-bottom: 20px;
 }

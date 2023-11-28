@@ -1,3 +1,5 @@
+// JavaScript (JSX) - Register.js
+
 import React, { useState } from "react";
 import "./Register.css";
 import { Link } from 'react-router-dom';
@@ -32,34 +34,34 @@ export default function Register() {
   };
 
   return (
-    <div className="login-container">
-      <form className="login-form" action="#" method="post">
-        <h2>Cree su cuenta</h2>
-        <div className="input-container">
-          <label htmlFor="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" value={firstname} onChange={(e) => nombre(e.target.value)} required />
+    <div className="rregister-container">
+      <form className="rregister-form" action="#" method="post">
+        <h2>Registrarse</h2>
+        <div className="rinput-container">
+          <label htmlFor="rnombre">Nombre: </label>
+          <input type="text" id="rnombre" name="rnombre" value={firstname} onChange={(e) => nombre(e.target.value)} required />
         </div>
-        <div className="input-container">
-          <label htmlFor="email">Correo Electrónico</label>
-          <input type="email" id="email" name="email" value={Email} onChange={(e) => correoElectronico(e.target.value)} required />
+        <div className="rinput-container">
+          <label htmlFor="remail">Correo Electrónico: </label>
+          <input type="email" id="remail" name="remail" value={Email} onChange={(e) => correoElectronico(e.target.value)} required />
         </div>
-        <div className="input-container">
-          <label htmlFor="contrasena">Contraseña</label>
-          <input type="password" id="contrasena" name="contrasena" value={Password} onChange={(e) => contraseña(e.target.value)} required />
+        <div className="rinput-container">
+          <label htmlFor="rcontrasena">Contraseña: </label>
+          <input type="password" id="rcontrasena" name="rcontrasena" value={Password} onChange={(e) => contraseña(e.target.value)} required />
         </div>
-        <div className="input-container">
-          <label htmlFor="repetir-contrasena">Repetir Contraseña</label>
+        <div className="rinput-container">
+          <label htmlFor="rrepetir-contrasena">Repetir Contraseña: </label>
           <input
             type="password"
-            id="repetir-contrasena"
-            name="repetir-contrasena"
+            id="rrepetir-contrasena"
+            name="rrepetir-contrasena"
             value={repeatPassword}
             onChange={(e) => repetirContraseña(e.target.value)}
             required
           />
         </div>
 
-        <div className="botoneslogin">
+        <div className="rbotoneslogin">
           <Link>
             <button type="submit" onClick={registro}>Crear cuenta </button>
           </Link>
@@ -68,3 +70,4 @@ export default function Register() {
     </div>
   );
 }
+

@@ -32,8 +32,8 @@ const Products = () => {
     return (
       <div className="card" key={product.id}>
         <img className="Imagen" src={product.img} alt="img-product-card" />
-        <h3>{product.name}</h3>
-        <h4>{product.price}$</h4>
+        <h3>{product.firstname}</h3>
+        <h4>{product.Price}$</h4>
         <button onClick={() => buyProducts(product)}>Buy</button>
       </div>
     );

@@ -1,4 +1,3 @@
-// En tu componente de React
 import React, { useState } from 'react';
 import axios from 'axios';
 import './LogIn.css';
@@ -44,11 +43,12 @@ const LoginForm = () => {
 
   return (
     <div className="login-form-container">
-      <h2>Iniciar Sesión</h2>
+      <h2 className="titulo">Iniciar Sesión</h2>
       <form>
-        <div className="form-group">
-          <label htmlFor="usernameOrEmail">Nombre de Usuario o Email:</label>
+        <div className="grupo-formulario">
+          <label className="etiqueta" htmlFor="usernameOrEmail">Nombre de Usuario o Email:</label>
           <input
+            className="entrada"
             type="text"
             id="usernameOrEmail"
             name="usernameOrEmail"
@@ -57,9 +57,10 @@ const LoginForm = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Contraseña:</label>
+        <div className="grupo-formulario">
+          <label className="etiqueta" htmlFor="password">Contraseña:</label>
           <input
+            className="entrada"
             type="password"
             id="password"
             name="password"
@@ -69,7 +70,7 @@ const LoginForm = () => {
           />
         </div>
 
-        <button type="button" onClick={handleLogin}>
+        <button className="boton" type="button" onClick={handleLogin}>
           Iniciar Sesión
         </button>
       </form>
