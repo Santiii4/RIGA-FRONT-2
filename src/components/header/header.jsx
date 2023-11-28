@@ -9,7 +9,7 @@ export default function Header () {
             <body class="body"> 
                 <section class="sectionMain">
                     <div class="divLogoTitulo">     
-                        <Link to= '/home'><img class="logo" src={riga}alt="R.I.G.A" /></Link>
+                        <Link to= '/'><img class="logo" src={riga}alt="R.I.G.A" /></Link>
                     </div>
                     <div>
                         <ul class="BarraNav">
