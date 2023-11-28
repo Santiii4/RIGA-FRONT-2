@@ -7,12 +7,23 @@ export class User extends BaseEntity {
     id: number;
 
     @Column()
-    name: string;
+    firstname: string;
 
     @Column()
-    gmail: string;
+    Email: string;
 
     @Column()
-    password: string;
+    Password:string;
+
+    @Column({
+        default: true
+    })
+    active: boolean;
+
+    @CreateDateColumn()
+    created: Date;
+
+    @UpdateDateColumn()
+    updated: Date;
 
 }
