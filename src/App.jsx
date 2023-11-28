@@ -40,7 +40,7 @@ function App() {
                 </>
               } />
               <Route path = '/Register' element= {<>
-                <Header />
+                { <Header />}
                 <Footer />
                 <Register />
                 </>
