@@ -19,19 +19,17 @@ const LoginForm = () => {
   const handleLogin = async () => {
     try {
       // Realiza una solicitud para iniciar sesión
-      const response = await axios.get('http://localhost:8080/api/users', {
-        params: formData, // Enviar datos como parámetros de consulta
-      });
+      const response = await axios.post('http://localhost:8080/api/login', formData);
 
-      // Verifica si el usuario existe en la base de datos
-      if (response.data && response.data.length > 0) {
+      // Verifica si el inicio de sesión es exitoso (adaptar según la estructura real de la respuesta)
+      if (response.data && response.data.token) {
         console.log('Inicio de sesión exitoso:', response.data);
         // Muestra una alerta de inicio de sesión exitoso
         alert('Inicio de sesión exitoso');
       } else {
-        console.log('Usuario no encontrado en la base de datos');
-        // Muestra una alerta de usuario no encontrado
-        alert('No se pudo iniciar sesión: Usuario no encontrado');
+        console.log('Credenciales incorrectas');
+        // Muestra una alerta de credenciales incorrectas
+        alert('No se pudo iniciar sesión: Credenciales incorrectas');
       }
 
     } catch (error) {
@@ -79,3 +77,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
