@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poltawski Nowy', serif;
 }
+
 .sectionMain {
     display: flex;
     flex-direction: row;
@@ -15,27 +16,29 @@
     width: 100%;
     z-index: 1000;
 }
-.divLogoTitulo, .BarraNav {
+
+.divLogoTitulo, .barraNav {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.BarraNav {
+
+.barraNav {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     list-style-type: none;
     font-family: 'Roboto Slab', serif;
-
 }
-.BarraNav {
+
+.barraNav {
     list-style-type: none;
     font-family: 'Roboto Slab', serif;
-
 }
-.liNav{
+
+.liNav {
     margin: 2rem;
-    background:#435334;
+    background: #435334;
 }
 
 .linkInfo {
@@ -48,6 +51,7 @@
     margin: -1;
 }
 
-.Carrito {
+.carrito {
     max-width: 40px;
 }
+
