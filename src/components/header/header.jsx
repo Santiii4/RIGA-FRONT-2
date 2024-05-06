@@ -6,12 +6,18 @@ import { Autocomplete } from '@mui/material';
 import logoImage from "../../multimedia/riga.png";
 import carritoImage from "../../multimedia/carro-de-la-compra.png";
 import "./header.css"; // Importa los estilos CSS aquí
+import { setup } from "../../ia/ia";
+import { useEffect } from "react";
 
 const productOptions = [
     { title: 'Product 1' },
     { title: 'Product 2' },
     { title: 'Product 3' },
 ];
+
+useEffect(() => {
+    setup()
+}, [])
 
 export default function Header() {
     return (
