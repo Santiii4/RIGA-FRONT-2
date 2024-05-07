@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, IconButton, InputBase, Badge } from '@mui/material';
 import { ShoppingCart, Search } from '@mui/icons-material';
@@ -6,8 +6,7 @@ import { Autocomplete } from '@mui/material';
 import logoImage from "../../multimedia/riga.png";
 import carritoImage from "../../multimedia/carro-de-la-compra.png";
 import "./header.css"; // Importa los estilos CSS aquí
-import { setup } from "../../ia/ia";
-import { useEffect } from "react";
+import { configurar } from "../../TF/TF";
 
 const productOptions = [
     { title: 'Product 1' },
@@ -15,11 +14,12 @@ const productOptions = [
     { title: 'Product 3' },
 ];
 
-useEffect(() => {
-    setup()
-}, [])
-
 export default function Header() {
+
+    useEffect(() => {
+        configurar()
+    }, [])
+
     return (
         <div>
             <AppBar position="static">
@@ -29,7 +29,7 @@ export default function Header() {
                     </Link>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                     <Autocomplete
-                        id="search-combo"
+                        id="filled-basic"
                         options={productOptions}
                         getOptionLabel={(option) => option.title}
                         style={{ width: 300, marginRight: '2rem' }}
@@ -69,12 +69,15 @@ export default function Header() {
                                     </IconButton>
                                 </Link>
                             </li>
+                            <li className="liNav">
+                                <span id="etiquetas_predichas"></span> {/* Añadido el span con el ID 'etiquetas_predichas' */}
+                            </li>
                         </ul>
                     </div>
                 </Toolbar>
             </AppBar>
+            <input type="text" id="entrada-texto" style={{display: 'none'}} /> {/* Añadido el input con el ID 'entrada-texto' */}
         </div>
     )
 }
-
 
